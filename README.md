@@ -1,16 +1,81 @@
-# React + Vite
+📦 agentic-layout
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple AI-powered Layout Agent application built with React (frontend) and Node.js + Express (backend).
+It allows users to send messages and get AI-processed responses to dynamically manage or generate layout ideas.
 
-Currently, two official plugins are available:
+🚀 Features
+💬 Chat-style message system
+⚡ Real-time API communication
+🧠 Backend message processing (Express server)
+🎯 Clean React UI with hooks-based state management
+🌐 CORS-enabled frontend-backend integration
+🛠️ Tech Stack
+Frontend:
+React.js
+JavaScript (ES6+)
+Fetch API
+Backend:
+Node.js
+Express.js
+CORS
+dotenv
+📁 Project Structure
+agentic-layout/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── hooks/useLayoutAgent.js
+│   │   └── utils/api.js
+│
+├── backend/
+│   ├── server.js
+│   ├── routes/chat.js
+│
+├── package.json
+└── README.md
+⚙️ Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/Kanchanbhosle/agentic-layout.git
+cd agentic-layout
+2️⃣ Install backend dependencies
+cd backend
+npm install
+3️⃣ Start backend server
+node server.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Server runs on:
 
-## React Compiler
+http://localhost:3001
+4️⃣ Install frontend dependencies
+cd frontend
+npm install
+5️⃣ Start frontend
+npm start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+App runs on:
 
-## Expanding the ESLint configuration
+http://localhost:3000
+🔗 API Endpoint
+POST /chat
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Request:
+
+{
+  "message": "Hello"
+}
+
+Response:
+
+{
+  "reply": "Processed: Hello"
+}
+🧠 How It Works
+User types a message in UI
+Frontend sends request to backend (/chat)
+Backend processes message
+Response is sent back to frontend
+UI updates with assistant reply
+🧪 Example
+User: Hello
+Bot: Processed: Hello 
